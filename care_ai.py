@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Creating the button using HTML
-st.markdown('<div class="hero"><a href="https://chatbot-medico.streamlit.app/" class="button">Explore Modules</a></div>', unsafe_allow_html=True)
+st.markdown('<div class="hero"><a href="https://modules.streamlit.app/" class="button">Explore Modules</a></div>', unsafe_allow_html=True)
 
 
 # About Us Section
