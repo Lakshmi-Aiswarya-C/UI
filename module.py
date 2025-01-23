@@ -40,8 +40,8 @@ st.markdown("""
 st.markdown("""
     <div class="container">
         <a href="https://chatbot-medico.streamlit.app/" class="button">Module 1</a>
-        <a href="https://tabletinfo.streamlit.app/" class="button">Module 2</a>
-        <a href="https://medicalreportsummarizer.streamlit.app/" class="button">Module 3</a>
+        <a href="https://sample-n8gbhvqfu3pr8eiqkugdah.streamlit.app/" class="button">Module 2</a>
+        <a href="https://sample2-bau8c6nzxkoqnilgfimxqs.streamlit.app/" class="button">Module 3</a>
         <a href="http://127.0.0.1:5000/module4" class="button">Module 4</a>
         <a href="http://127.0.0.1:5000/module5" class="button">Module 5</a>
     </div>
