@@ -48,8 +48,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- Navigation using radio buttons ---
-selected = st.radio("Navigation", ["Home", "About", "Contact"], horizontal=True)
+# Sidebar Dropdown Navigation
+st.sidebar.title("CARE AI Navigation")
+selected = st.sidebar.selectbox("Go to", [
+    "Home", 
+    "About", 
+    "Contact", 
+    "Chatbot", 
+    "Tablet Info Summarizer", 
+    "Lab Report Analyzer", 
+    "Diet Plan Suggestor"
+])
 
 # --- Home Section ---
 if selected == "Home":
@@ -103,6 +112,35 @@ elif selected == "Contact":
         <p style="font-size: 1.1em;"><b>Address:</b> Thiruparankundram, Tamil Nadu 625015</p>
     </div>
     """, unsafe_allow_html=True)
+
+# --- Chatbot Page ---
+elif selected == "Chatbot":
+    st.title("💬 Disease Chatbot")
+    st.write("Start typing your medical query below:")
+    st.markdown("🔗 [Launch Chatbot](https://careai-chat.streamlit.app/)")
+
+# --- Tablet Info Summarizer ---
+elif selected == "Tablet Info Summarizer":
+    st.title("💊 Tablet Info Summarizer")
+    uploaded_image = st.file_uploader("Upload tablet image", type=["png", "jpg", "jpeg"])
+    if uploaded_image:
+        st.image(uploaded_image, width=300)
+        st.success("Tablet image uploaded. Processing...")
+
+# --- Lab Report Analyzer ---
+elif selected == "Lab Report Analyzer":
+    st.title("📑 Lab Report Analyzer")
+    uploaded_file = st.file_uploader("Upload lab report (PDF)", type=["pdf"])
+    if uploaded_file:
+        st.success("Lab report uploaded. Analyzing...")
+
+# --- Diet Plan Suggestor ---
+elif selected == "Diet Plan Suggestor":
+    st.title("🥗 Diet Plan Suggestor")
+    condition = st.text_input("Enter your health condition")
+    preferences = st.text_area("Enter your dietary preferences (e.g., vegetarian, high protein, etc.)")
+    if st.button("Generate Plan"):
+        st.success("Your personalized diet plan will be generated here.")
 
 # --- Footer ---
 st.markdown("""
