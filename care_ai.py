@@ -30,12 +30,19 @@ st.markdown("""
         .button {
             padding: 10px 20px;
             font-size: 1.2em;
-            background-color: #5A8DEE;
+            background-color: #0056b3; /* Darker blue for contrast */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background-color 0.3s ease;
         }
+
+        .button:hover {
+            background-color: #003d80; /* Even darker on hover */
+        }
+
         .about, .contact, .footer {
             padding: 40px 20px;
             margin-top: 30px;
