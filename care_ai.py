@@ -28,20 +28,29 @@ st.markdown("""
             margin: 20px auto;
         }
         .button {
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 1.2em;
-            background-color: #0056b3; /* Darker blue for contrast */
-            color: white;
+            background-color: #1a73e8; /* Stronger, deeper blue */
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: background-color 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for contrast */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .button:hover {
+            background-color: #1558b0;
+            transform: scale(1.05); /* Subtle zoom on hover */
+        }
+        
+        .button:focus {
+            outline: 3px solid #a4c8ff; /* Accessibility outline */
+            outline-offset: 3px;
         }
 
-        .button:hover {
-            background-color: #003d80; /* Even darker on hover */
-        }
 
         .about, .contact, .footer {
             padding: 40px 20px;
