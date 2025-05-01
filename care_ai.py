@@ -30,27 +30,32 @@ st.markdown("""
         .button {
             padding: 12px 24px;
             font-size: 1.2em;
-            background-color: #1a73e8; /* Stronger, deeper blue */
-            color: #ffffff;
+            background-color: #1a73e8;
+            color: #ffffff !important;
             text-decoration: none;
             border-radius: 8px;
             border: none;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for contrast */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .button:hover {
-            background-color: #1558b0;
-            transform: scale(1.05); /* Subtle zoom on hover */
-        }
-        
-        .button:focus {
-            outline: 3px solid #a4c8ff; /* Accessibility outline */
-            outline-offset: 3px;
+            display: inline-block;
         }
 
+        a.button {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .button:hover {
+            background-color: #1558b0;
+            transform: scale(1.05);
+        }
+
+        .button:focus {
+            outline: 3px solid #a4c8ff;
+            outline-offset: 3px;
+        }
 
         .about, .contact, .footer {
             padding: 40px 20px;
