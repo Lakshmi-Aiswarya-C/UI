@@ -136,7 +136,7 @@ elif selected == "Contact":
 
 # --- Chatbot Page ---
 elif selected == "Chatbot":
-    st.title("💬 Disease Chatbot")
+    st.title("💬 Curabot")
     st.write("Start typing your medical query below:")
     st.markdown("🔗 [Launch Chatbot](https://careai-chat.streamlit.app/)")
 
