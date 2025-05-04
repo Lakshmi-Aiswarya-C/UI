@@ -96,7 +96,7 @@ if selected == "Home":
 
     st.markdown("""
     <div style="text-align: center; padding-top: 20px;">
-        <a href="https://careai-chat.streamlit.app/" class="button">Start Chatbot</a>
+        <a href="https://careai-chat.streamlit.app/" class="button" target="_blank">Start Chatbot</a>
     </div>
     """, unsafe_allow_html=True)
 
@@ -143,25 +143,32 @@ elif selected == "Chatbot":
 # --- Tablet Info Summarizer ---
 elif selected == "Tablet Info Summarizer":
     st.title("💊 Tablet Info Summarizer")
-    uploaded_image = st.file_uploader("Upload tablet image", type=["png", "jpg", "jpeg"])
-    if uploaded_image:
-        st.image(uploaded_image, width=300)
-        st.success("Tablet image uploaded. Processing...")
+    st.write("Upload a medicine image or use the dedicated tool below:")
+    st.markdown("""
+        <a href="https://5df9nqf5y2dqv2w7ev6xza.streamlit.app/" class="button" target="_blank">
+            Open Tablet Info Summarizer App
+        </a>
+    """, unsafe_allow_html=True)
 
 # --- Lab Report Analyzer ---
 elif selected == "Lab Report Analyzer":
     st.title("📑 Lab Report Analyzer")
-    uploaded_file = st.file_uploader("Upload lab report (PDF)", type=["pdf"])
-    if uploaded_file:
-        st.success("Lab report uploaded. Analyzing...")
+    st.write("Upload a medical lab report or go to the dedicated analyzer below:")
+    st.markdown("""
+        <a href="https://fxvmph62r948bafhhj8meh.streamlit.app/" class="button" target="_blank">
+            Open Lab Report Analyzer App
+        </a>
+    """, unsafe_allow_html=True)
 
 # --- Diet Plan Suggestor ---
 elif selected == "Diet Plan Suggestor":
     st.title("🥗 Diet Plan Suggestor")
-    condition = st.text_input("Enter your health condition")
-    preferences = st.text_area("Enter your dietary preferences (e.g., vegetarian, high protein, etc.)")
-    if st.button("Generate Plan"):
-        st.success("Your personalized diet plan will be generated here.")
+    st.write("Describe your condition and preferences or use the dedicated planner below:")
+    st.markdown("""
+        <a href="https://8z3sw876xnebjntbj26r8b.streamlit.app/" class="button" target="_blank">
+            Open Diet Plan Suggestor App
+        </a>
+    """, unsafe_allow_html=True)
 
 # --- Footer ---
 st.markdown("""
