@@ -85,8 +85,8 @@ selected = st.sidebar.selectbox("Go to", [
 if selected == "Home":
     st.markdown("""
     <div class="hero">
-        <h1 style="font-size: 2.5em;">🤖 CARE AI - Intelligent Medical Chatbot 🤖</h1>
-        <p style="font-size: 1.5em;">Your One-Stop AI Health Assistant</p>
+        <h1 style="font-size: 2.5em;"> CARE AI - Intelligent Medical Chatbot </h1>
+        <p style="font-size: 1.5em;">Curabot</p>
         <p style="font-size: 1.2em;">Ask your medical questions. Get instant, smart help.</p>
     </div>
     """, unsafe_allow_html=True)
