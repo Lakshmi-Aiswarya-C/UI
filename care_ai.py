@@ -96,7 +96,7 @@ if selected == "Home":
 
     st.markdown("""
     <div style="text-align: center; padding-top: 20px;">
-        <a href="https://lbeify6qqjru5vnmglplup.streamlit.app/" class="button" target="_blank">Start Chatbot</a>
+        <a href="http://localhost:8501/" class="button" target="_blank">Start Curabot</a>
     </div>
     """, unsafe_allow_html=True)
 
@@ -138,7 +138,7 @@ elif selected == "Contact":
 elif selected == "Chatbot":
     st.title("💬 Curabot")
     st.write("Start typing your medical query below:")
-    st.markdown("🔗 [Launch Chatbot](https://lbeify6qqjru5vnmglplup.streamlit.app/)")
+    st.markdown("🔗 [Launch Chatbot](http://localhost:8501/)")
 
 # --- Tablet Info Summarizer ---
 elif selected == "Tablet Info Summarizer":
