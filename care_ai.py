@@ -9,46 +9,66 @@ def load_lottieurl(url):
         return None
     return response.json()
 
-# Lottie Animation
-lottie_hero = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x62chJ.json")
-
 # Page Config
 st.set_page_config(page_title="CARE AI – Intelligent Medical Chatbot", page_icon="💡", layout="wide")
 
-# Custom CSS
+# Custom CSS for professional look
 st.markdown("""
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #121212, #343434);
-            color: #ffffff;
+            background-color: #f8f9fa;
+            color: #333;
         }
-        .hero, .about, .contact, .footer {
-            padding: 30px;
+        .hero {
             text-align: center;
+            padding: 60px 0;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #007bff;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
         }
         .button {
             padding: 12px 24px;
             font-size: 1.1em;
-            background-color: #1a73e8;
+            background-color: #28a745;
             color: #ffffff !important;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 500;
             transition: background-color 0.3s ease;
-            display: inline-block;
+            margin-top: 20px;
         }
         .button:hover {
-            background-color: #1558b0;
+            background-color: #218838;
         }
-        ul {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .feature img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            color: #007bff;
         }
         .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            color: #555;
+        }
+        .footer p {
             font-size: 0.9em;
-            color: #bbbbbb;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -70,35 +90,31 @@ selected = st.sidebar.selectbox("Go to", [
 if selected == "Home":
     st.markdown("""
     <div class="hero">
-        <h1 style="font-size: 2.5em;">CARE AI – Intelligent Medical Chat Assistant</h1>
-        <p style="font-size: 1.3em;">Bringing clarity and support to your everyday health questions through AI-powered dialogue.</p>
-        <p style="font-size: 1.1em;">Our mission is to simplify medical information access and improve health literacy for everyone.</p>
+        <h1>CARE AI – Your Personal Medical Assistant</h1>
+        <p>Empowering you with AI-driven health insights to simplify medical understanding and wellness.</p>
+        <p>Quickly analyze reports, medications, and diet plans tailored to your health needs.</p>
+        <div>
+            <a href="http://localhost:8501/" class="button" target="_blank">Start Now</a>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
-    if lottie_hero:
-        st_lottie(lottie_hero, height=300, key="hero_animation")
-
-    st.markdown("""
-    <div style="text-align: center; padding-top: 20px;">
-        <a href="http://localhost:8501/" class="button" target="_blank">Launch Chat Assistant</a>
-    </div>
-    """, unsafe_allow_html=True)
+    # You can replace this with any static image or other subtle animations
+    # If you want to keep an animation, you can load another one or remove this section
+    # if lottie_hero:
+    #     st_lottie(lottie_hero, height=300, key="hero_animation")
 
 # --- About ---
 elif selected == "About":
     st.markdown("""
-    <div class="about">
+    <div style="text-align: center; padding: 40px;">
         <h2>About CARE AI</h2>
-        <p style="font-size: 1.1em;">
-            CARE AI is a unified conversational platform designed to simplify the way individuals interact with health information.
-            By leveraging advanced AI and LLM technologies, it guides users in understanding medical reports, medications, and diet plans.
-        </p>
+        <p style="font-size: 1.1em; color: #555;">CARE AI is a unified conversational platform designed to simplify the way individuals interact with health information. By leveraging advanced AI and LLM technologies, it guides users in understanding medical reports, medications, and diet plans.</p>
     </div>
 
-    <div class="about">
+    <div style="text-align: center; padding: 40px;">
         <h2>System Capabilities</h2>
-        <ul style="font-size: 1.1em; line-height: 1.8;">
+        <ul style="font-size: 1.1em; line-height: 1.8; color: #555; list-style-position: inside;">
             <li><strong>Disease Information:</strong> Insights into symptoms, causes, and treatments.</li>
             <li><strong>Tablet Info Summarizer:</strong> Upload a tablet image and get clear details about usage and effects.</li>
             <li><strong>Lab Report Analyzer:</strong> Summarizes lab results using AI, with layman explanations.</li>
@@ -111,13 +127,11 @@ elif selected == "About":
 elif selected == "Methodology":
     st.title("Development Methodology")
     st.markdown("""
-    <p style="font-size: 1.1em;">
-        CARE AI uses a modular approach that combines conversational AI with domain-specific processing for lab reports, diet plans, and medications.
-    </p>
-    <ul style="font-size: 1.1em; line-height: 1.8;">
+    <p style="font-size: 1.1em; color: #555;">CARE AI uses a modular approach that combines conversational AI with domain-specific processing for lab reports, diet plans, and medications.</p>
+    <ul style="font-size: 1.1em; line-height: 1.8; color: #555; list-style-position: inside;">
         <li><strong>Intent Detection:</strong> The chatbot determines the user’s query type (e.g., diet, lab, medicine).</li>
         <li><strong>Lab Report Summarizer:</strong> Extracts and simplifies insights using AI-powered image and text parsing.</li>
-        <li><strong>Tablet Info Summarizer:</strong> Uses OCR/NLP to fetch dosage, side effects, usage information.</li>
+        <li><strong>Tablet Info Summarizer:</strong> Uses OCR/NLP to fetch dosage, side effects, and usage information.</li>
         <li><strong>Diet Planner:</strong> Uses user profile and KNN to match meal options with calorie and health needs.</li>
     </ul>
     """, unsafe_allow_html=True)
@@ -127,7 +141,7 @@ elif selected == "Chatbot":
     st.title("Medical Chatbot")
     st.markdown("""
         <p>Ask general medical queries or get assistance with reports, tablets, or diet plans.</p>
-        <a href="http://localhost:8501/" class="button" target="_blank">Open Chat Assistant</a>
+        <a href="https://fdqwsn7yubnhxddt59p4rx.streamlit.app/" class="button" target="_blank">Open Chat Assistant</a>
     """, unsafe_allow_html=True)
 
 # --- Tablet Info Summarizer ---
@@ -163,7 +177,7 @@ elif selected == "Diet Plan Suggestor":
 # --- Contact ---
 elif selected == "Contact":
     st.markdown("""
-    <div class="contact">
+    <div style="text-align: center; padding: 40px;">
         <h2>Contact Us</h2>
         <p style="font-size: 1.1em;">For questions or feedback, please reach out to our team.</p>
         <p style="font-size: 1.1em;"><strong>Email:</strong> careai.support@gmail.com</p>
