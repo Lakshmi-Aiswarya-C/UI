@@ -101,7 +101,8 @@ if selected == "Home":
     """, unsafe_allow_html=True)
 
     with st.expander("How CARE AI Works – Behind the Scenes", expanded=False):
-        st.image("Picture.png", use_column_width=True)
+        st.image("Picture.png", use_container_width=True)
+
 
         st.markdown("""
         <p style='color:#555; font-size: 1.05em;'>
