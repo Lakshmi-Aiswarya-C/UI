@@ -95,10 +95,19 @@ if selected == "Home":
         <p>Empowering you with AI-driven health insights to simplify medical understanding and wellness.</p>
         <p>Quickly analyze reports, medications, and diet plans tailored to your health needs.</p>
         <div>
-            <a href="http://localhost:8501/" class="button" target="_blank">Start Now</a>
+            <a href="https://fdqwsn7yubnhxddt59p4rx.streamlit.app/" class="button" target="_blank">Start Now</a>
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+    with st.expander("How CARE AI Works – Behind the Scenes", expanded=False):
+        st.image("", use_column_width=True)
+        st.markdown("""
+        <p style='color:#555; font-size: 1.05em;'>
+            This diagram shows how your health queries are processed step-by-step, either through integrated modules like tablet summarization and lab analysis or through dynamic responses via AI. CARE AI intelligently classifies your request and routes it accordingly.
+        </p>
+        """, unsafe_allow_html=True)
+
 
     # You can replace this with any static image or other subtle animations
     # If you want to keep an animation, you can load another one or remove this section
