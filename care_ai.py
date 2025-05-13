@@ -1,4 +1,4 @@
-'''
+
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
@@ -185,107 +185,6 @@ elif selected == "Contact":
         <p style="font-size: 1.1em;"><strong>Location:</strong> Thiruparankundram, Tamil Nadu – 625015</p>
     </div>
     """, unsafe_allow_html=True)
-
-# --- Footer ---
-st.markdown("""
-<div class="footer">
-    <p>&copy; 2025 CARE AI. Final Year Project – Dept. of IT, KLNCE</p>
-</div>
-""", unsafe_allow_html=True)
-
-'''
-
-
-import streamlit as st
-from streamlit_lottie import st_lottie
-import requests
-
-# Function to load lottie animation
-def load_lottieurl(url):
-    response = requests.get(url)
-    if response.status_code != 200:
-        return None
-    return response.json()
-
-# Page Config
-st.set_page_config(page_title="CARE AI – Intelligent Medical Chatbot", page_icon="💡", layout="wide")
-
-# Custom CSS for professional look
-st.markdown("""
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3em;
-            color: #007bff;
-        }
-        .hero p {
-            font-size: 1.2em;
-            color: #555;
-        }
-        .button {
-            padding: 12px 24px;
-            font-size: 1.1em;
-            background-color: #28a745;
-            color: #ffffff !important;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        .button:hover {
-            background-color: #218838;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f9fa;
-            color: #555;
-        }
-        .footer p {
-            font-size: 0.9em;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# --- Hero Section ---
-st.markdown("""
-<div class="section hero">
-    <h1>CARE AI – Your Personal Medical Assistant</h1>
-    <p>Empowering you with AI-driven health insights to simplify medical understanding and wellness.</p>
-    <p>Quickly analyze reports, medications, and diet plans tailored to your health needs.</p>
-    <a href="#about" class="button">Learn More</a>
-</div>
-""", unsafe_allow_html=True)
-
-# --- About ---
-st.markdown("""
-<div class="section" id="about">
-    <h2>About CARE AI</h2>
-    <p style="font-size: 1.1em; color: #555;">CARE AI is a unified conversational platform designed to simplify the way individuals interact with health information. By leveraging advanced AI and LLM technologies, it guides users in understanding medical reports, medications, and diet plans.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# --- Methodology ---
-st.markdown("""
-<div class="section">
-    <h2>System Capabilities</h2>
-    <ul style="font-size: 1.1em; line-height: 1.8; color: #555; list-style-position: inside;">
-        <li><strong>Disease Information:</strong> Insights into symptoms, causes, and treatments.</li>
-        <li><strong>Tablet Info Summarizer:</strong> Upload a tablet image and get clear details about usage and effects.</li>
-        <li><strong>Lab Report Analyzer:</strong> Summarizes lab results using AI, with layman explanations.</li>
-        <li><strong>Diet Plan Suggestor:</strong> Personalized meal planning using user data and AI models.</li>
-    </ul>
-</div>
-""", unsafe_allow_html=True)
 
 # --- Footer ---
 st.markdown("""
