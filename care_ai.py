@@ -102,6 +102,7 @@ if selected == "Home":
 
     with st.expander("How CARE AI Works – Behind the Scenes", expanded=False):
         st.image("Picture.png", use_column_width=True)
+
         st.markdown("""
         <p style='color:#555; font-size: 1.05em;'>
             This diagram shows how your health queries are processed step-by-step, either through integrated modules like tablet summarization and lab analysis or through dynamic responses via AI. CARE AI intelligently classifies your request and routes it accordingly.
