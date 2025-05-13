@@ -186,9 +186,3 @@ elif selected == "Contact":
     </div>
     """, unsafe_allow_html=True)
 
-# --- Footer ---
-st.markdown("""
-<div class="footer">
-    <p>&copy; 2025 CARE AI. Final Year Project – Dept. of IT, KLNCE</p>
-</div>
-""", unsafe_allow_html=True)
