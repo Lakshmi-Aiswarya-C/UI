@@ -79,7 +79,6 @@ st.sidebar.title("Navigation")
 selected = st.sidebar.selectbox("Go to", [
     "Home",
     "About",
-    "Methodology",
     "Chatbot",
     "Tablet Info Summarizer",
     "Lab Report Analyzer",
@@ -135,18 +134,7 @@ elif selected == "About":
     </div>
     """, unsafe_allow_html=True)
 
-# --- Methodology ---
-elif selected == "Methodology":
-    st.title("Development Methodology")
-    st.markdown("""
-    <p style="font-size: 1.1em; color: #555;">CARE AI uses a modular approach that combines conversational AI with domain-specific processing for lab reports, diet plans, and medications.</p>
-    <ul style="font-size: 1.1em; line-height: 1.8; color: #555; list-style-position: inside;">
-        <li><strong>Intent Detection:</strong> The chatbot determines the user’s query type (e.g., diet, lab, medicine).</li>
-        <li><strong>Lab Report Summarizer:</strong> Extracts and simplifies insights using AI-powered image and text parsing.</li>
-        <li><strong>Tablet Info Summarizer:</strong> Uses OCR/NLP to fetch dosage, side effects, and usage information.</li>
-        <li><strong>Diet Planner:</strong> Uses user profile and KNN to match meal options with calorie and health needs.</li>
-    </ul>
-    """, unsafe_allow_html=True)
+
 
 # --- Chatbot ---
 elif selected == "Chatbot":
