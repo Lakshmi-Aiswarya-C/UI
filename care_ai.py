@@ -106,7 +106,7 @@ if selected == "Home":
 
         st.markdown("""
         <p style='color:#555; font-size: 1.05em;'>
-            This diagram shows how your health queries are processed step-by-step, either through integrated modules like tablet summarization and lab analysis or through dynamic responses via AI. CARE AI intelligently classifies your request and routes it accordingly.
+            This diagram shows how your health queries are processed step-by-step, either through integrated modules like tablet summarization and lab analysis or through dynamic responses via AI. 
         </p>
         """, unsafe_allow_html=True)
 
